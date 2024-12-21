@@ -1,0 +1,223 @@
+/* about.css */
+.about-section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+/* Profile Section */
+.profile-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
+
+.profile-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting {
+    color: var(--primary-color);
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.tagline {
+    font-size: 24px;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.bio {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    opacity: 0.8;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgba(25, 51, 53, 0.1);
+    border: 2px solid rgba(25, 51, 53, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.image-placeholder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-icon {
+    font-size: 120px;
+}
+
+/* Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
+
+.expertise-grid.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.expertise-card {
+    padding: 24px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(25, 51, 53, 0.1);
+    transition: var(--transition);
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.expertise-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(25, 51, 53, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.expertise-icon .icon {
+    font-size: 28px;
+}
+
+.expertise-card h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.expertise-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-primary);
+    opacity: 0.7;
+}
+
+/* Skills Section */
+.skills-container {
+    padding: 32px;
+    background: rgba(25, 51, 53, 0.05);
+    border-radius: 24px;
+    border: 1px solid rgba(25, 51, 53, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
+
+.skills-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--white);
+    border: 1px solid rgba(25, 51, 53, 0.2);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.skill-chip:hover {
+    transform: scale(1.05);
+    background: rgba(25, 51, 53, 0.05);
+}
+
+.skill-icon {
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-placeholder {
+        width: 250px;
+        height: 250px;
+    }
+
+    .greeting {
+        font-size: 28px;
+    }
+
+    .tagline {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        margin-bottom: 40px;
+    }
+
+    .expertise-card {
+        padding: 20px;
+    }
+
+    .skills-container {
+        padding: 24px;
+    }
+}

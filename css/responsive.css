@@ -1,0 +1,164 @@
+/* responsive.css */
+/* Tablet and smaller desktop */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .main-title {
+        font-size: 48px;
+    }
+
+    .header-description {
+        font-size: 20px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .main-title {
+        font-size: 40px;
+    }
+
+    .btn {
+        padding: 16px 24px;
+        font-size: 16px;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-illustration {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .welcome-badge {
+        font-size: 14px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .header-description {
+        font-size: 18px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tech-stack {
+        justify-content: center;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        padding: 20px;
+    }
+
+    .footer-social-links {
+        gap: 20px;
+    }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+    padding: 80px 40px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-link {
+    color: var(--white);
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: var(--transition);
+}
+
+.mobile-link:hover {
+    opacity: 0.8;
+    padding-left: 10px;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--white);
+    margin: 5px 0;
+    transition: var(--transition);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
